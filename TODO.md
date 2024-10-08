@@ -1,0 +1,30 @@
+- User login
+- user registration
+- Get User Data:
+  - Profile
+  - mixtapes
+- Models:
+  - Mixtape
+    - name
+    - creator
+    - playlist: [Objects] -> nested Schema
+  - User:
+    - username
+    - email
+    - password
+    - mixtapes (populate with mixtape model)
+- Routes:
+
+  - Users Routes:
+    - login
+    - register
+    - logout
+    - show all User Data
+  - Mixtapes routes:
+    - create Mixtape
+    - update Mixtape
+    - delete Mixtape
+
+- JWT token for verification
+- cookies
+- MongoDB: add cluster for this
