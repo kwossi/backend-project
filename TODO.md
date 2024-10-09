@@ -1,3 +1,5 @@
+
+
 - User login
 - user registration
 - Get User Data:
@@ -14,7 +16,6 @@
     - password
     - mixtapes (populate with mixtape model)
 - Routes:
-
   - Users Routes:
     - login
     - register
