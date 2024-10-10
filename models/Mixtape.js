@@ -5,7 +5,7 @@ const mixtapeItemSchema = new Schema({
   artist: String,
   url: String,
   thumbnail: String,
-  isToggled: true,
+  isToggled: { type: Boolean, default: true },
 });
 
 export const mixtapesSchema = new Schema({

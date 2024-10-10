@@ -1,5 +1,3 @@
-
-
 - User login
 - user registration
 - Get User Data:
@@ -16,6 +14,7 @@
     - password
     - mixtapes (populate with mixtape model)
 - Routes:
+
   - Users Routes:
     - login
     - register
@@ -26,6 +25,8 @@
     - update Mixtape
     - delete Mixtape
 
-- JWT token for verification
+- JWT token for verification -> should be there, missing verification and has to be implemented
 - cookies
 - MongoDB: add cluster for this
+
+- POSTMAN testing routes
