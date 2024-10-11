@@ -17,7 +17,7 @@ const userSchema = new Schema({
     type: String,
     required: true,
   },
-  mixtapesList: [mixtapesSchema],
+  mixtapesList: [{ type: Schema.Types.ObjectId, ref: "Mixtape" }],
 });
 
 userSchema.pre("save", async function (next) {

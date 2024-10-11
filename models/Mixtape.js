@@ -1,11 +1,10 @@
-import { Schema } from "mongoose";
+import { Schema, model } from "mongoose";
 
 const mixtapeItemSchema = new Schema({
   title: String,
   artist: String,
   url: String,
   thumbnail: String,
-  isToggled: { type: Boolean, default: true },
 });
 
 export const mixtapesSchema = new Schema({
@@ -18,4 +17,8 @@ export const mixtapesSchema = new Schema({
     ref: "User",
   },
   playlist: [mixtapeItemSchema],
+  isToggled: { type: Boolean, default: true },
+  isPublic: { type: Boolean, default: false },
 });
+
+export default model("Mixtape", mixtapesSchema);

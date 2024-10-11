@@ -1,32 +1,47 @@
+user edits mixtape
+
+- Routes:
+
+  - Mixtapes routes:
+    - update Mixtape
+    - delete Mixtape
+
+- MongoDB: add cluster for this
+- POSTMAN testing routes
+
+DONE:
+
 - User login
 - user registration
 - Get User Data:
+
   - Profile
-  - mixtapes
+
 - Models:
+
   - Mixtape
     - name
     - creator
     - playlist: [Objects] -> nested Schema
   - User:
+
     - username
     - email
     - password
     - mixtapes (populate with mixtape model)
-- Routes:
 
-  - Users Routes:
+      - Users Routes:
+
     - login
     - register
     - logout
     - show all User Data
-  - Mixtapes routes:
-    - create Mixtape
-    - update Mixtape
-    - delete Mixtape
 
-- JWT token for verification -> should be there, missing verification and has to be implemented
+    - JWT token for verification -> should be there, missing verification and has to be implemented
+
 - cookies
-- MongoDB: add cluster for this
 
-- POSTMAN testing routes
+user creates mixtape - Routes:
+
+- Mixtapes routes:
+  - create Mixtape

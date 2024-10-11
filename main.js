@@ -5,6 +5,7 @@ import cookieParser from "cookie-parser";
 
 import connectDB from "./libs/database.js";
 import usersRouter from "./routes/usersRouter.js";
+import mixtapesRouter from "./routes/mixtapesRouter.js";
 import {
   globalErrorHandler,
   routeNotFound,
@@ -21,6 +22,7 @@ app.use(cookieParser());
 //! to do: routes : Users, Mixtapes
 
 app.use("/users", usersRouter);
+app.use("/mixtapes", mixtapesRouter);
 
 //* error hanlders
 app.use(routeNotFound);

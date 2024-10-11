@@ -4,7 +4,7 @@ import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 import { createSendToken } from "../libs/jwt.js";
 
-//! controllers for: register, login, logout, protection, create a mixtape?
+//! controllers for: create a mixtape?
 
 export const register = async (req, res, next) => {
   try {
@@ -19,7 +19,7 @@ export const login = async (req, res, next) => {
   try {
     const { email, password, userName } = req.body;
     if ((!email && !userName) || !password) {
-      throw createError(400, "Please provide email and password.");
+      throw createError(400, "Please provide email or username and password.");
     }
     const user =
       (email && (await User.findOne({ email }))) ||
@@ -67,9 +67,9 @@ export const protect = async (req, res, next) => {
   }
 };
 
-export const getUser = (req, res, next) => {
+export const getUser = async (req, res, next) => {
   const { user, isAuthenticated } = req;
-
+  await user.populate("mixtapesList");
   user.password = undefined;
 
   res.status(200).json({
