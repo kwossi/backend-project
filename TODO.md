@@ -1,10 +1,10 @@
 user edits mixtape
 
 - Routes:
-
   - Mixtapes routes:
     - update Mixtape
-    - delete Mixtape
+    - delete Mixtape (test) -> delete also from User List!!!!!
+
 
 - MongoDB: add cluster for this
 - POSTMAN testing routes
@@ -45,3 +45,5 @@ user creates mixtape - Routes:
 
 - Mixtapes routes:
   - create Mixtape
+  - get all publich mixtapes
+  - get one mixtape
